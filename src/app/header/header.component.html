@@ -1,0 +1,16 @@
+<header>
+  <div class="header">
+    <div class="container">
+      <span routerLink="/all" class="logo">GitHub UI</span>
+      <button md-icon-button [mdMenuTriggerFor]="menu" class="header-btn">
+        <md-icon>more_vert</md-icon>
+      </button>
+      <md-menu #menu="mdMenu">
+        <a href="https://github.com" md-menu-item>
+          <md-icon>cloud</md-icon>
+          <span>GitHub</span>
+        </a>
+      </md-menu>
+    </div>
+  </div>
+</header>

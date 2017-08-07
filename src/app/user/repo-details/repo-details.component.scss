@@ -1,0 +1,20 @@
+.repo-details-login {
+  font-weight: 500;
+  font-size: 28px;
+}
+.repo-details-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  .repo-details-link {
+    display: inline-block;
+    padding: 7px 15px 8px 15px;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+    &.active {
+      border-bottom: 1px solid #24292e;
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+}

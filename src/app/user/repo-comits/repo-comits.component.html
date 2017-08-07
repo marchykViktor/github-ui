@@ -1,0 +1,12 @@
+<div class="repo-comits-item-wrap">
+  <div *ngFor="let comit of commits" class="repo-comits-item">
+    <div class="repo-comits-item-head">
+    </div>
+    <div class="repo-comits-item-content">
+      {{ comit.commit.message }} 
+    </div>
+  </div>
+</div>
+<div class="repo-comits-btn-wrap">
+  <button md-raised-button (click)="loadMore()">Загрузить еще</button>
+</div>

@@ -1,0 +1,24 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body {
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-weight: 300;
+}
+.txt-a-center {
+  text-align: center;
+}
+.margin-auto {
+  margin: auto;
+}
+.mat-icon {
+  color: #b4b4b4;
+}
+.list-item {
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  &:last-child {
+    border: none;
+  }
+}
+a, a:hover, a:active, a:focus {
+  text-decoration: none;    
+  color: inherit;  
+}

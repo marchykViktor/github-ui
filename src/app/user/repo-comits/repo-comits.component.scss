@@ -1,0 +1,41 @@
+.repo-comits-item-wrap {
+  margin: 20px 0;
+}
+.repo-comits-item {
+  position: relative;
+  width: 98%;
+  background: #f3f3f3;
+  border-radius: 4px;
+  padding: 2em 1.5em;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+  margin: 15px auto;
+  transition: all .3s ease;
+  left: 0;
+  &:before {
+    content: "";  
+    z-index: -1;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 50%;
+    top: 65%;
+    max-width:300px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+  &:hover {
+    left: 5px;
+  }
+}
+.repo-comits-btn-wrap {
+  text-align: center;
+}

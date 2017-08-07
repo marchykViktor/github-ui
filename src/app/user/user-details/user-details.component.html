@@ -1,0 +1,20 @@
+<app-go-back></app-go-back>
+<div class="row">
+  <div class="col-md-2" *ngIf="user">
+    <img [src]="user.avatar_url" [alt]="user.name" class="user-details-img">
+    <div class="user-details-name">{{ user.name }}</div>
+    <div class="user-details-login">{{ user.login }}</div>
+  </div>
+  <div class="col-md-10">
+    <md-list>
+      <h3 md-subheader>Репозитории</h3>
+      <md-list-item class="user-details-list-item list-item" *ngFor="let repo of repos">
+        <md-icon md-list-icon>folder</md-icon>
+        <p md-line class="user-details-list-title"><span [routerLink]="['repo', repo.name]">{{ repo.name }}</span></p>
+        <p md-line class="user-details-list-date"><span>{{repo.pushed_at | date}}</span></p>
+        <a [href]="repo.html_url" mdTooltip="Открыть на GitHub" ><md-icon>remove_red_eye</md-icon></a>
+      </md-list-item>
+    </md-list>
+    <div class="user-details-list-load" *ngIf="repoLength === 30 && showLoadBtn === true"><button md-raised-button (click)="loadMore()">Загрузить еще</button></div> 
+  </div>
+</div>

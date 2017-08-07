@@ -1,0 +1,13 @@
+<app-go-back></app-go-back>
+<div class="row">
+  <div class="col-md-2">
+    <span class="repo-details-login">@{{ login }}</span>
+  </div>
+  <div class="col-md-10">
+    <nav class="repo-details-nav">
+      <div routerLink="details" routerLinkActive="active" class="repo-details-link" ><span>Репозиторий</span></div>
+      <div routerLink="comits" routerLinkActive="active" class="repo-details-link" ><span>Комиты</span></div>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>

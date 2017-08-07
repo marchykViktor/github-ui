@@ -1,0 +1,11 @@
+<div *ngFor="let user of users" class="col-md-2 col-custom">
+  <md-card class="user-list-card">
+    <img class="user-list-img" md-card-image [src]="user.avatar_url" >
+    
+    <div class="user-list-title txt-a-center">{{ user.login }}</div>
+    
+    <md-card-actions class="txt-a-center user-list-actions">
+      <button md-button class="user-list-btn" (click)="onSelect(user.login)">Перейти</button>
+    </md-card-actions>
+  </md-card>
+</div>

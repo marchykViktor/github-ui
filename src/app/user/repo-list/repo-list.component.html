@@ -1,0 +1,10 @@
+<md-list>
+  <md-list-item class="repo-list-item list-item" *ngFor="let repo of repoArr">
+    <md-icon md-list-icon *ngIf="repo.type === 'dir' || repo.type === 'tree'">folder</md-icon>
+    <md-icon md-list-icon *ngIf="repo.type === 'file' || repo.type === 'blob'">insert_drive_file</md-icon>
+    <p md-line *ngIf="repo.type === 'file'" class="repo-list-file">{{ repo.name }}</p>
+    <p md-line *ngIf="repo.type === 'dir'" (click)="selectDir(repo.git_url)" class="repo-list-url">{{ repo.name }}</p>
+    <p md-line *ngIf="repo.type === 'blob'" class="repo-list-file">{{ repo.path }}</p>  
+    <p md-line *ngIf="repo.type === 'tree'" (click)="selectDir(repo.url)" class="repo-list-url">{{ repo.path }}</p>
+  </md-list-item>
+</md-list>
